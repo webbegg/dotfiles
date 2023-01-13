@@ -1,0 +1,6 @@
+require('webbegg.plugin.nvim-tree')
+require('webbegg.plugin.lualine')
+require('webbegg.plugin.treesitter')
+require('webbegg.plugin.telescope')
+require('webbegg.plugin.lspconfig')
+require('webbegg.plugin.catppuccin')

@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# ln -sf $DOTFILES/zsh/zshrc $HOME/.zshrc
+
+rm -rf $HOME/.config/nvim
+rm -rf $HOME/.config/nvim
+
+ln -s $DOTFILES/lvim $HOME/.config/lvim 
+ln -s $DOTFILES/lvim $HOME/.config/lvim 
