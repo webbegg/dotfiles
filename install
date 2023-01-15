@@ -9,6 +9,11 @@ rm -rf $HOME/..local/share/nvim
 rm -rf $HOME/.config/nvim
 ln -s $DOTFILES/nvim $HOME/.config/nvim 
 
+# alacritty
+rm -rf $HOME/.config/alacritty
+ln -s $DOTFILES/alacritty $HOME/.config/alacritty
+
+# iterm
 rm -rf $HOME/.config/iterm
 ln -s $DOTFILES/iterm $HOME/.config/iterm
 

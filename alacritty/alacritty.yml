@@ -1,0 +1,15 @@
+live_config_reload: true
+window:
+  opacity: 1
+  padding:
+    x: 16
+    y: 18
+  dynamic_padding: false
+  decorations: buttonless
+font:
+  normal:
+    family: "SFMono Nerd Font"
+    style: Regular
+  size: 17
+import: 
+  - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
