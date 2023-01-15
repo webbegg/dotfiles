@@ -12,4 +12,6 @@ font:
     style: Regular
   size: 17
 import: 
-  - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
+  - ./themes/catppuccin/catppuccin-macchiato.yml
+shell:
+  program: /usr/local/bin/fish
