@@ -13,7 +13,3 @@ ln -s $DOTFILES/nvim $HOME/.config/nvim
 rm -rf $HOME/.config/alacritty
 ln -s $DOTFILES/alacritty $HOME/.config/alacritty
 
-# iterm
-rm -rf $HOME/.config/iterm
-ln -s $DOTFILES/iterm $HOME/.config/iterm
-
