@@ -2,7 +2,9 @@
 
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# ln -sf $DOTFILES/zsh/zshrc $HOME/.zshrc
+# fish
+rm -rf $HOME/.config/fish
+ln -s $DOTFILES/fish $HOME/.config/fish
 
 # nvim
 rm -rf $HOME/..local/share/nvim
