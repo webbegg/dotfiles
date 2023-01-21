@@ -24,7 +24,7 @@ function M.config()
     on_config_done = nil,
     theme = "dropdown", ---@type telescope_themes
     defaults = {
-      prompt_prefix = lvim.icons.ui.Telescope .. " ",
+      prompt_prefix = '   ',
       selection_caret = lvim.icons.ui.Forward .. " ",
       entry_prefix = "  ",
       initial_mode = "insert",
@@ -46,6 +46,7 @@ function M.config()
       ---@usage Mappings are fully customizable. Many familiar mapping patterns are setup as defaults.
       mappings = {
         i = {
+          ['<esc>'] = actions.close,
           ["<C-n>"] = actions.move_selection_next,
           ["<C-p>"] = actions.move_selection_previous,
           ["<C-c>"] = actions.close,
