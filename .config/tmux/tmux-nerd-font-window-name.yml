@@ -1,0 +1,17 @@
+config:
+  # fallback-icon: ""
+  # multi-pane-icon: ""
+  show-name: true
+  # icon-position: "left"
+
+icons:
+  volta-shim: "󰎙"
+  # btop: "📈"
+  # bun: "🥟"
+  # docker: "🐳"
+  # fish: ""
+  # nvim: ""
+  # overmind: "👀"
+  # stripe-mock: "💳"
+  # stripe: "💳"
+  # yazi: "📂"
