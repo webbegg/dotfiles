@@ -1,7 +1,7 @@
 config:
-  # fallback-icon: ""
-  # multi-pane-icon: ""
-  show-name: true
+  fallback-icon: ""
+  multi-pane-icon: ""
+  show-name: false
   # icon-position: "left"
 
 icons:
