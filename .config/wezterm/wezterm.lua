@@ -8,8 +8,8 @@
 -- A GPU-accelerated cross-platform terminal emulator
 -- https://wezfurlong.org/wezterm/
 
-local dark_opacity = 1
-local light_opacity = 1
+local dark_opacity = 0.82
+local light_opacity = 0.82
 
 local b = require("utils/background")
 local cs = require("utils/color_scheme")
@@ -35,10 +35,10 @@ local config = {
 	color_scheme = cs.get_color_scheme(),
 
 	window_padding = {
-		left = 8,
-		right = 8,
-		top = 8,
-		bottom = 8,
+		left = '1cell',
+		right = '1cell',
+		top = '0.5cell',
+		bottom = '0cell',
 	},
 
 	set_environment_variables = {
@@ -55,6 +55,7 @@ local config = {
 	native_macos_fullscreen_mode = false,
 	window_close_confirmation = "NeverPrompt",
 	window_decorations = "RESIZE",
+	use_fancy_tab_bar = false,
 
 	-- keys
 	keys = {
@@ -180,5 +181,76 @@ wezterm.on("user-var-changed", function(window, pane, name, value)
 	end
 	window:set_config_overrides(overrides)
 end)
+
+-- TAB BAR
+--
+-- local function tab_title(tab_info)
+--   local title = tab_info.tab_title
+--   -- if the tab title is explicitly set, take that
+--   if title and #title > 0 then
+--     return title
+--   end
+--   -- Otherwise, use the title from the active pane
+--   -- in that tab
+--   return tab_info.active_pane.title
+-- end
+--
+-- -- The filled in variant of the < symbol
+-- -- local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_right_hard_divider
+--
+-- -- The filled in variant of the > symbol
+-- -- local SOLID_RIGHT_ARROW = wezterm.nerdfonts.pl_left_hard_divider
+--
+-- -- This function returns the suggested title for a tab.
+-- -- It prefers the title that was set via `tab:set_title()`
+-- -- or `wezterm cli set-tab-title`, but falls back to the
+-- -- title of the active pane in that tab.
+-- function tab_title(tab_info)
+--   local title = tab_info.tab_title
+--   -- if the tab title is explicitly set, take that
+--   if title and #title > 0 then
+--     return title
+--   end
+--   -- Otherwise, use the title from the active pane
+--   -- in that tab
+--   return tab_info.active_pane.title
+-- end
+--
+-- config.show_tab_index_in_tab_bar = false
+-- config.show_new_tab_button_in_tab_bar = false
+--
+-- wezterm.on(
+--   'format-tab-title',
+--   function(tab, tabs, panes, config, hover, max_width)
+--     local background = '#191919'
+--     local foreground = '#808080'
+--
+--     if tab.is_active then
+--       background = '#2b2042'
+--       foreground = '#c0c0c0'
+--     elseif hover then
+--       background = '#2b2b2b'
+--       foreground = '#909090'
+--     end
+--
+--     local title = tab_title(tab)
+--
+--     -- ensure that the titles fit in the available space,
+--     -- and that we have room for the edges.
+--     title = wezterm.truncate_right(title, max_width - 2)
+--
+--     return {
+--       -- { Background = { Color = edge_background } },
+--       -- { Foreground = { Color = edge_foreground } },
+--       { Background = { Color = background } },
+--       { Foreground = { Color = foreground } },
+--       { Text = "[   " },
+--       { Text = title },
+--       { Text = "  ] " },
+--       --{ Background = { Color = edge_background } },
+--       --{ Foreground = { Color = edge_foreground } },
+--     }
+--   end
+-- )
 
 return config
